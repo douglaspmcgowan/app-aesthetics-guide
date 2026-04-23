@@ -1,0 +1,528 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Apps look the way someone chose · A field guide to app design</title>
+<meta name="description" content="Why vibe-coded apps feel the same — the signature of app-shaped defaults, the fourteen vocabularies, the nine archetypes, and who to follow.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..900;1,8..60,300..900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>(function(){try{const s=localStorage.getItem('theme');const d=window.matchMedia('(prefers-color-scheme: dark)').matches;document.documentElement.setAttribute('data-theme',s||(d?'dark':'light'));}catch(e){}})();</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<button type="button" class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+  <svg class="icon-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="12" cy="12" r="4"/>
+    <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+  </svg>
+  <svg class="icon-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+  </svg>
+</button>
+
+<div class="grain" aria-hidden="true"></div>
+
+<header class="masthead">
+  <div class="page">
+    <div class="eyebrow">A field guide &nbsp;·&nbsp; April 2026</div>
+    <h1 class="hed">Apps look the way someone chose.</h1>
+    <p class="lede">Most software you open every day wasn't designed. What follows is a map of why — the specific tells of apps assembled from defaults, the fourteen vocabularies an app designer is actually working in, the nine archetypes an app can be, and fifteen traditions worth knowing.</p>
+    <div class="meta">
+      <span>Ways of Thinking series</span>
+      <span class="dot">·</span>
+      <span>Paper set in Source Serif 4</span>
+    </div>
+  </div>
+</header>
+
+<nav class="toc" aria-label="Contents">
+  <div class="page">
+    <div class="toc-label">Contents</div>
+    <ol class="toc-list">
+      <li><a href="#thesis"><span class="toc-num">i</span><span class="toc-text">The thesis</span></a></li>
+      <li><a href="#signature"><span class="toc-num">ii</span><span class="toc-text">The vibe-coded app signature</span></a></li>
+      <li><a href="#habits"><span class="toc-num">iii</span><span class="toc-text">Counter-habits</span></a></li>
+      <li><a href="#vocabularies"><span class="toc-num">iv</span><span class="toc-text">The fourteen vocabularies</span></a></li>
+      <li><a href="#archetypes"><span class="toc-num">v</span><span class="toc-text">The nine archetypes</span></a></li>
+      <li><a href="#traditions"><span class="toc-num">vi</span><span class="toc-text">Fifteen traditions</span></a></li>
+      <li><a href="#exemplars"><span class="toc-num">vii</span><span class="toc-text">Exemplars worth opening</span></a></li>
+      <li><a href="#galleries"><span class="toc-num">viii</span><span class="toc-text">Where to find app examples</span></a></li>
+      <li><a href="#practitioners"><span class="toc-num">ix</span><span class="toc-text">Practitioners to follow</span></a></li>
+      <li><a href="#close"><span class="toc-num">x</span><span class="toc-text">One-paragraph synthesis</span></a></li>
+    </ol>
+  </div>
+</nav>
+
+<main class="essay">
+
+  <section id="thesis" class="bay">
+    <div class="page">
+      <h2 hidden>The thesis</h2>
+      <div class="section-mark">
+        <span class="section-num">§&nbsp;i</span>
+        <span class="section-title">The thesis</span>
+      </div>
+      <p class="opening"><span class="dropcap">A</span>pps look the way someone chose — or the way nobody chose. The claim that gives this guide its shape is that software you return to is not an essay with a shelf life of one visit. Every design decision compounds. What charms at the first open annoys at the hundredth. What teaches on day one obstructs on day thirty. A considered app is the sum of a thousand small intentional decisions about return visits; a vibe-coded app is the sum of <em>no stance on the user's job</em>, assembled from whatever the framework's dashboard template happened to contain.</p>
+      <p>This is a sibling to the web-design guide next door. Where that guide surveys the dialects of pages you read once and close, this one is about software you open daily — the editor you spend six hours in, the launcher you hit fifty times a day, the dashboard you scan at 9 a.m. Apps have a different constraint set: empty and loading and error are first-class surfaces, not afterthoughts; the keyboard is a primary input, not a convenience; density has to earn its pixel; the chrome around the content is, often, the product. What follows is a field guide in ten parts: the app-specific tells, the counter-habits, the fourteen vocabularies every app decision lives inside, the nine archetypes an app can be, fifteen traditions worth knowing, an atlas of exemplars, and a short list of practitioners whose output will level your eye.</p>
+    </div>
+  </section>
+
+  <section id="signature" class="bay">
+    <div class="page">
+      <h2 hidden>The vibe-coded app signature</h2>
+      <div class="section-mark">
+        <span class="section-num">§&nbsp;ii</span>
+        <span class="section-title">The vibe-coded app signature</span>
+      </div>
+      <p>The vibe-coded marketing page has been diagnosed to death — aurora gradients, <code>rounded-2xl</code> on everything, Inter at one weight, three feature cards, centred everything. The app version is different. A page made of defaults still reads as a page; an app made of defaults reads as a thing that has no opinion on your work. If three or more of the following appear together, the app was generated rather than composed.</p>
+      <ol class="num-list">
+        <li><strong>The shadcn dashboard hero.</strong> Sidebar, four stat cards, a data table, a line chart — regardless of what the app actually does. A fitness tracker, a CRM, and a tax tool all open to the same screen.</li>
+        <li><strong>One modal for everything.</strong> Delete confirmation, inline edit, multi-step onboarding, and "are you sure you want to leave?" all handled by the same centred dialog. No sheet, no popover, no inline edit — just the modal.</li>
+        <li><strong>Empty states as a centred illustration and one sentence, identical across the product.</strong> "No projects yet" on page one; "No invoices yet" on page two; same mid-gray SVG, same neutral copy.</li>
+        <li><strong>Loading as a single spinner.</strong> A generic <code>&lt;Spinner /&gt;</code> where a skeleton screen shaped like the content should be. Users perceive skeleton-based interfaces as roughly a third faster than identical spinner-based ones.</li>
+        <li><strong>Errors as toasts that disappear before they're read.</strong> Four-second timeouts for "Payment failed" and "You're offline" alike. No persistence, no error region, no inline validation.</li>
+        <li><strong>No keyboard shortcuts, or shortcuts hidden in a menu nobody opens.</strong> No accelerators next to menu items, no <kbd>⌘</kbd>&thinsp;K palette, no <kbd>?</kbd> shortcut sheet.</li>
+        <li><strong>The same padding everywhere.</strong> <code>p-4</code> on the settings form, <code>p-4</code> on the scan-row in the inbox, <code>p-4</code> on the dense spreadsheet. No density tier matches task density.</li>
+        <li><strong>Settings as a long unsorted list of switches.</strong> No grouping, no search, no dangerous-zone, no hierarchy between account-critical toggles and theme preferences.</li>
+        <li><strong>Onboarding as a four-screen carousel the user dismisses.</strong> Three paragraphs of value prop and a "Get Started" button, rather than a first-run that produces a real artifact.</li>
+        <li><strong>A "primary" button in the header that isn't the most common action.</strong> A giant indigo "Upgrade" or "Invite" anchored top-right while the user's actual job-to-be-done lives behind two clicks.</li>
+        <li><strong>A sidebar with fifteen icons, no labels, no groups.</strong> Lucide icons stacked vertically, tooltip-only labels, no section dividers, no collapse.</li>
+        <li><strong>Destructive actions adjacent to primary ones.</strong> Delete next to Save, Close next to Confirm, with no visual or spatial distance. A tired user will click the wrong one.</li>
+        <li><strong>AI gradient theatre.</strong> Blue-to-purple gradients and sparkle icons signalling "AI" without changing the interaction. The feature wears automation as costume while remaining a chat box with no affordance for verification, citation, or repair.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="habits" class="bay">
+    <div class="page">
+      <h2 hidden>Counter-habits</h2>
+      <div class="section-mark">
+        <span class="section-num">§&nbsp;iii</span>
+        <span class="section-title">Counter-habits</span>
+      </div>
+      <p>The counter-habits — the patterns that compound into software you return to without resentment — are less about taste than discipline. You either designed the partial-data state or you didn't; you either trapped focus in that modal or you didn't; your undo works or it doesn't. The craft is mostly in what you refused to leave undecided.</p>
+
+      <h3>Design the six states before the happy path</h3>
+      <p>Every app surface renders in one of six states — empty, loading, partial, error, success, stale. A design that only specifies the happy path is a design that has specified one-sixth of the product. The empty state should teach the next action; the loading state should be a skeleton shaped like the eventual content; the partial state actually has to handle "two of three requests back"; the error state is recoverable with a specific verb; the stale state says <em>what</em> is stale and when it was last fresh. Linear and Superhuman sketch all six before any polish begins. It shows.</p>
+
+      <h3>Keyboard-first, visibly</h3>
+      <p>A <kbd>⌘</kbd>&thinsp;K command palette is the baseline. VS Code, Linear, Raycast, Notion, Stripe, Slack, Figma, and GitHub all inherit it from the same Sublime Text ancestor; the palette is so important that newer apps ship it before they ship a sidebar. The rest is discipline: <code>:focus-visible</code> styles that survive redesigns, accelerators shown next to menu items, a <kbd>?</kbd> sheet that lists every shortcut, and the Gmail tradition of two-key navigation (<kbd>G</kbd> <kbd>I</kbd> for inbox, <kbd>G</kbd> <kbd>B</kbd> for backlog). If a newcomer can learn by pressing <kbd>⌘</kbd>&thinsp;K and reading, and a power user can chain four actions without looking at the screen, the keyboard has been done right.</p>
+
+      <h3>Density tiers, not one padding</h3>
+      <p>Comfortable, default, compact — three density tiers, not one <code>p-4</code>. A scan-row and a fill-form should not share spacing; a log stream and a checkout should not share type scale. Linear ships a density toggle; Notion adjusts density per surface; Bloomberg Terminal does not have a comfortable mode because its users are not comfortable people. The tell of craft here is that a power user can <em>opt in</em> to density over time, and the app respects the choice across surfaces rather than forgetting it on the next screen.</p>
+
+      <h3>Optimistic UI and a first-class undo</h3>
+      <p>Do the action immediately, roll back on failure, surface a time-bounded undo. Gmail's "Undo send" is the reference — the interface trusts the user and provides a generous reversal window rather than an "Are you sure?" gate. Undo is a primitive; "are you sure?" is a failure to commit. The lineage runs Smalltalk, Photoshop, Git, Linear, Figma: every serious tool treats reversal as central, not confessional.</p>
+
+      <h3>Persistent state, respected across sessions</h3>
+      <p>Scroll position, open panels, filter choices, split-pane ratios, the selection, the sidebar width, the cursor's position in the document — all survive reload, and ideally survive device. If the user has to re-find their place every time, you have told them their context is disposable. The best-engineered apps treat the UI itself as a document with a save state.</p>
+
+      <h3>Motion that earns its complexity</h3>
+      <p>Under 300 milliseconds, ease-out, interruptible, <code>transform</code> and <code>opacity</code> only, and <code>prefers-reduced-motion</code> respected without exception. Motion applied to a high-frequency action is a bug; repetition becomes cognitive load, not delight. The best motion is the motion the user does not notice — a menu that opens 180&nbsp;ms later than they expected feels slower than a menu that opens instantly and animates for 180&nbsp;ms <em>after</em> it has opened.</p>
+
+      <h3>Latency budgets as interaction specs</h3>
+      <p>A hundred milliseconds feels instant; three hundred feels responsive; one second requires a skeleton; ten seconds requires a progress bar and a cancel. Designers treat these as constraints on the <em>interaction</em>, not the engineers' problem downstream. The Linear rule is something like: if a user can perceive it, it is part of the design.</p>
+
+      <h3>Focus trap, Esc, focus return</h3>
+      <p>Every modal traps <kbd>Tab</kbd> inside itself, closes on <kbd>Esc</kbd>, and returns focus to the element that opened it. This is the single most reliable craft-versus-vibe-coded tell in generated apps. The details live in three or four <code>addEventListener</code> calls, and they are almost always missing.</p>
+
+      <h3>Errors that name their system</h3>
+      <p>"Something went wrong" is the vibe-coded default; "We couldn't reach Stripe; retry in a moment" is the counter. Errors name the failing system, name the user's recourse, and name what state the data is in. The voice of a product is most densely condensed in its error copy — more than in the marketing page, more than in the onboarding, more than in the headline.</p>
+    </div>
+  </section>
+
+  <section id="vocabularies" class="bay">
+    <div class="page">
+      <h2 hidden>The fourteen app vocabularies</h2>
+      <div class="section-mark">
+        <span class="section-num">§&nbsp;iv</span>
+        <span class="section-title">The fourteen app vocabularies</span>
+      </div>
+      <p>Apps are shaped by the <em>job</em>, not the style — but inside that job, every decision lives on a specific axis. These are the fourteen independent vocabularies app designers are actually working in. Where the web guide's fourteen are mostly <em>visual</em>, these are <em>behavioural</em>: they describe the moves available to a thing that renders, accepts input, and remembers.</p>
+
+      <ol class="vocab">
+        <li>
+          <div class="vocab-head"><span class="vocab-num">01</span><span class="vocab-name">Density</span></div>
+          <p>Comfortable, default, compact — a real tier, not a theme option. Row height, padding scales, data-per-pixel. A log tool and a checkout should not share a scale; a Bloomberg terminal and a journal app should not share a scale.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">02</span><span class="vocab-name">Chrome-to-content ratio</span></div>
+          <p>How much of the viewport is the app's frame versus the user's data. Editors tend to twenty per cent chrome and eighty per cent content; dashboards tend toward forty-sixty; conversational tools drift dangerously toward sixty per cent chrome when every message carries reactions, timestamps, avatars, and threading affordances.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">03</span><span class="vocab-name">Navigation model</span></div>
+          <p>Sidebar, top nav, command palette, breadcrumb, tabs, spatial. Each carries defaults — a sidebar implies hierarchy, a top nav implies breadth, a command palette implies verbs, a spatial nav implies no hierarchy at all. Pick one as primary; anything more is chrome theft.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">04</span><span class="vocab-name">State design</span></div>
+          <p>Empty, loading, partial, error, success, stale — as six real screens, not as one reused component. The empty state is the most neglected; the partial state is the most absent; the stale state barely exists in most products.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">05</span><span class="vocab-name">Selection and multi-select</span></div>
+          <p>Click, <kbd>⇧</kbd>-click range, <kbd>⌘</kbd>-click toggle, marquee, keyboard range, Finder-style type-to-select. Apps that get selection right also get bulk actions right — because selection is the input to every bulk verb.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">06</span><span class="vocab-name">Keyboard surface</span></div>
+          <p>Shortcut grammar, focus order, skip links, shortcut discoverability via <kbd>?</kbd>. The hardest-working keyboard surface is not the palette but the focus ring — a visibly correct <code>:focus-visible</code> is the single most underrated signal that a team cares.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">07</span><span class="vocab-name">Feedback latency</span></div>
+          <p>Optimistic, pessimistic, skeleton, spinner, silent — matched to stakes. A "save" can be optimistic; a "pay" cannot. A "filter" can be silent; a "send" cannot. Designing this is not engineering — it's a decision about what the interface <em>pretends</em> to have just happened.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">08</span><span class="vocab-name">Error voice</span></div>
+          <p>Blame-the-system versus blame-the-user; recoverable versus terminal; human versus code. "Something went wrong" is the vibe-coded default; "We couldn't reach Stripe; retry in a moment" is the counter. Errors are where your product's voice is most densely condensed.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">09</span><span class="vocab-name">Modality</span></div>
+          <p>Modal, sheet, inline, side panel, full-page. Vibe-coded apps use a modal for everything; considered apps use the full register. A destructive action is a modal; an edit is inline; a long-form task is a panel; a flow is a sheet.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">10</span><span class="vocab-name">Affordance weight</span></div>
+          <p>How visually loud a control is relative to how often it's used. Fitts's Law meets frequency: the most common action should be the easiest to hit; the most dangerous action should be visibly weighted and spatially separated from the primary one.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">11</span><span class="vocab-name">Persistence</span></div>
+          <p>What the app remembers between sessions, what it forgets, what the user controls. Scroll position, filter state, panel layout, sort order, split-pane ratios, cursor position in the document. The cost of forgetting is paid a hundred times a day.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">12</span><span class="vocab-name">Data display</span></div>
+          <p>Table, list, card, grid, timeline, tree, graph. Each fails at different scales. A card grid beyond forty items is a wall; a tree past five levels is a maze; a force-directed graph beyond two hundred nodes is noise.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">13</span><span class="vocab-name">Search and filter</span></div>
+          <p>Global search, faceted filter, saved views, scoped search, query language. A considered search surface separates <em>find</em> (I know what I'm looking for) from <em>explore</em> (show me what's here); a vibe-coded search is a single input and a ranked list.</p>
+        </li>
+        <li>
+          <div class="vocab-head"><span class="vocab-num">14</span><span class="vocab-name">Onboarding posture</span></div>
+          <p>Empty state that teaches, versus tour that interrupts, versus progressive reveal, versus nothing at all. Linear, Raycast, and Superhuman all land on empty-state-teaches. The four-screen carousel is the tell of a team that hadn't figured out what the first-run artifact was.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="archetypes" class="bay wider">
+    <div class="page page-wide">
+      <h2 hidden>The nine archetypes</h2>
+      <div class="section-mark">
+        <span class="section-num">§&nbsp;v</span>
+        <span class="section-title">The nine archetypes</span>
+      </div>
+      <p class="intro">An app is not a style — it is a <em>job</em>. Styles are downstream of jobs. What follows are nine archetypes, each with its own defaults, reference apps, and failure modes. The craft question for any app is: which archetype is this honestly, which archetype is it pretending to be, and which of the two is it better served by?</p>
+
+      <h3 hidden>Archetype grid</h3>
+      <div class="archetype-grid">
+        <article class="archetype">
+          <h4>01 &middot; Tool</h4>
+          <p>You open it, do one task, close it. Calculator, launcher, color picker, regex tester — the sharp-edged utilities. The aesthetic is keyboard-first — a single input on top, ranked results below, actions via accelerators. Failure mode: tools that grow into dashboards and forget their job is to disappear.</p>
+          <p class="arch-refs"><em>Reference:</em> <a href="https://www.raycast.com">Raycast</a>, <a href="https://www.alfredapp.com">Alfred</a>, <a href="https://1password.com">1Password</a>, <a href="https://arc.net/search">Arc Search</a>.</p>
+        </article>
+        <article class="archetype">
+          <h4>02 &middot; Editor</h4>
+          <p>You enter, you work for hours, you leave with an artifact. Documents, code, designs, videos, spreadsheets. The aesthetic is chrome-light, keyboard-heavy, selection-rich, undo-generous. Failure mode: editors that interrupt flow — autosave dialogs, unexpected modals, UI that moves.</p>
+          <p class="arch-refs"><em>Reference:</em> <a href="https://linear.app">Linear</a>, <a href="https://www.figma.com">Figma</a>, <a href="https://www.notion.so">Notion</a>, <a href="https://code.visualstudio.com">VS Code</a>, <a href="https://obsidian.md">Obsidian</a>, <a href="https://cursor.com">Cursor</a>.</p>
+        </article>
+        <article class="archetype">
+          <h4>03 &middot; Dashboard</h4>
+          <p>You scan, you notice, you drill. Read-mostly, high-density, alert-driven. The aesthetic is Bloomberg-adjacent — small type, tight rows, state colours, chart-first layout. Failure mode: decorative dashboards — pretty charts you can't pivot from a spike to the underlying rows.</p>
+          <p class="arch-refs"><em>Reference:</em> <a href="https://www.datadoghq.com">Datadog</a>, <a href="https://vercel.com/dashboard">Vercel</a>, <a href="https://grafana.com">Grafana</a>, <a href="https://dashboard.stripe.com">Stripe Dashboard</a>, <a href="https://posthog.com">PostHog</a>.</p>
+        </article>
+        <article class="archetype">
+          <h4>04 &middot; Explorer</h4>
+          <p>You navigate a large structured space to find or understand. Graph views, reference libraries, research tools. The aesthetic is dual — a spatial surface plus a structured fallback (list, table, outline) that lets you cross-link. Failure mode: the force-directed hairball — a graph that looks like exploration but is unusable past two hundred nodes.</p>
+          <p class="arch-refs"><em>Reference:</em> <a href="https://help.obsidian.md/plugins/graph-view">Obsidian graph view</a>, <a href="https://www.are.na">Are.na</a>, <a href="https://kumu.io">Kumu</a>, <a href="https://notebooklm.google.com">NotebookLM</a>, <a href="https://www.perplexity.ai/spaces">Perplexity Spaces</a>.</p>
+        </article>
+        <article class="archetype">
+          <h4>05 &middot; Feed</h4>
+          <p>You pull to refresh, you scroll, you dip in and out. RSS, inbox, timeline. The aesthetic is card-based or list-based, chronological by default, keyboard-triagable (<kbd>j</kbd>/<kbd>k</kbd>/<kbd>e</kbd>/<kbd>s</kbd>). Failure mode: algorithmic reranking and infinite scroll — the feed that fights the user's attempt to finish.</p>
+          <p class="arch-refs"><em>Reference:</em> <a href="https://reederapp.com">Reeder</a>, <a href="https://readwise.io/read">Readwise Reader</a>, <a href="https://netnewswire.com">NetNewsWire</a>, <a href="https://arc.net/search">Arc Search</a>.</p>
+        </article>
+        <article class="archetype">
+          <h4>06 &middot; CRUD / form-heavy</h4>
+          <p>You enter data, you review data, you correct data. Admin panels, internal tools, financial products. The aesthetic is tab-order-respecting, validation-on-blur, explicit save-state. Failure mode: eager validation that fires on every keystroke, and modal misuse that loses work on navigation.</p>
+          <p class="arch-refs"><em>Reference:</em> <a href="https://retool.com">Retool</a>, <a href="https://airtable.com">Airtable</a>, <a href="https://dashboard.stripe.com">Stripe Dashboard</a>, <a href="https://linear.app">Linear</a> triage.</p>
+        </article>
+        <article class="archetype">
+          <h4>07 &middot; Canvas / spatial</h4>
+          <p>Free 2D space with objects, zoom, pan. Whiteboards, design tools, diagramming. The aesthetic is multiplayer-baked-in, vector-underneath, cursor-discipline-observed. Failure mode: the pixel canvas masquerading as vector — infinite in name only.</p>
+          <p class="arch-refs"><em>Reference:</em> <a href="https://www.figma.com">Figma</a>, <a href="https://miro.com">Miro</a>, <a href="https://www.tldraw.com">tldraw</a>, <a href="https://whimsical.com">Whimsical</a>, <a href="https://www.figma.com/figjam/">FigJam</a>.</p>
+        </article>
+        <article class="archetype">
+          <h4>08 &middot; Conversational</h4>
+          <p>Turn-taking, append-only, long scrollback. Chat apps, AI assistants, messaging. The aesthetic is pinned-input, optimistic-message, never-reflow-history, typography-first. Failure mode: scroll jumps as the model streams a token; threads that hide the conversation's actual structure.</p>
+          <p class="arch-refs"><em>Reference:</em> <a href="https://claude.ai">Claude</a>, <a href="https://chatgpt.com">ChatGPT</a>, <a href="https://support.apple.com/messages">iMessage</a>, <a href="https://slack.com">Slack</a>, <a href="https://discord.com">Discord</a>.</p>
+        </article>
+        <article class="archetype">
+          <h4>09 &middot; Admin / console</h4>
+          <p>Power users, keyboard-heavy, terminal-adjacent. Database clients, Kubernetes tools, terminal emulators. The aesthetic is monospace-first, SSH-safe (no WebGL, no heavy animation), destructive-actions-explicit. Failure mode: Electron shells around SSH that render slowly over high latency.</p>
+          <p class="arch-refs"><em>Reference:</em> <a href="https://tableplus.com">TablePlus</a>, <a href="https://k9scli.io">k9s</a>, <a href="https://www.warp.dev">Warp</a>, <a href="https://ghostty.org">Ghostty</a>, <a href="https://postgresapp.com">Postgres.app</a>.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="traditions" class="bay wider">
+    <div class="page page-wide">
+      <h2 hidden>Fifteen traditions</h2>
+      <div class="section-mark">
+        <span class="section-num">§&nbsp;vi</span>
+        <span class="section-title">Fifteen traditions</span>
+      </div>
+      <p class="intro">Apps inherit from a smaller family of design lineages than marketing pages do. Most live traditions are mergers of two — a platform's human-interface guidelines and an aesthetic stance inside them. Fifteen of the live app-design traditions as of April 2026, with representative products.</p>
+
+      <h3 class="group">Platform lineages</h3>
+      <div class="tradition-grid">
+        <article class="tradition">
+          <h4>01 &middot; Mac OS / Apple HIG</h4>
+          <p>Consistency over cleverness, from the 1984 Mac through macOS 26 Liquid Glass. A single authority publishes a document and expects every app to respect it.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://culturedcode.com/things/">Things 3</a>, <a href="https://flexibits.com/fantastical">Fantastical</a>, <a href="https://tot.rocks/">Tot</a>, Apple's own Notes and Reminders.</p>
+        </article>
+        <article class="tradition">
+          <h4>02 &middot; Windows 95 affordance maximalism</h4>
+          <p>Every control looks clickable — bevels, raised borders, dotted focus rectangles. The lineage survives wherever clarity beats prettiness.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://www.bloomberg.com/professional/solution/bloomberg-terminal/">Bloomberg Terminal</a>, trading dashboards, <a href="https://react95.io/">React95</a>.</p>
+        </article>
+        <article class="tradition">
+          <h4>03 &middot; Material Design / Material 3 Expressive</h4>
+          <p>Digital paper and ink; motion as meaning; 2025's Material 3 Expressive dials up springier motion and bolder colour.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://keep.google.com/">Google Keep</a>, <a href="https://niagaralauncher.app/">Niagara Launcher</a>, Android 16 system surfaces.</p>
+        </article>
+        <article class="tradition">
+          <h4>04 &middot; Microsoft Fluent 2</h4>
+          <p>Five fundamentals — light, depth, motion, material, scale — with acrylic blurs and Mica as signatures.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://www.microsoft.com/microsoft-teams/">Teams</a>, <a href="https://www.microsoft.com/microsoft-loop">Loop</a>, <a href="https://outlook.com/">Outlook</a>.</p>
+        </article>
+      </div>
+
+      <h3 class="group">Enterprise with public docs</h3>
+      <div class="tradition-grid">
+        <article class="tradition">
+          <h4>05 &middot; Carbon / Spectrum / Atlassian</h4>
+          <p>Accessibility-first systems with full token stories, dark modes that were designed rather than inverted, and a documented a11y pattern for every component.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://cloud.ibm.com/">IBM Cloud</a>, <a href="https://www.adobe.com/products/photoshop.html">Photoshop on iPad</a>, <a href="https://www.atlassian.com/software/jira">Jira</a>.</p>
+        </article>
+      </div>
+
+      <h3 class="group">2020s product schools</h3>
+      <div class="tradition-grid">
+        <article class="tradition">
+          <h4>06 &middot; Opinionated tool</h4>
+          <p>One workflow, no options, no customisation that leads to a worse tool. Dense monospace-adjacent type, dark-first palette, instant client-side state.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://linear.app">Linear</a>, <a href="https://www.shortcut.com/">Shortcut</a>. (Height sunset in 2025.)</p>
+        </article>
+        <article class="tradition">
+          <h4>07 &middot; Keyboard-heavy power-tool</h4>
+          <p><kbd>⌘</kbd>&thinsp;K first, mouse as fallback. Instant fuzzy search, composable actions, Vim/Quicksilver ancestry.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://www.raycast.com">Raycast</a>, <a href="https://superhuman.com/">Superhuman</a>, <a href="https://readwise.io/read">Readwise Reader</a>.</p>
+        </article>
+        <article class="tradition">
+          <h4>08 &middot; Craft-the-chrome</h4>
+          <p>The sidebar, the palette, the tab bar, the shell — the frame around content — is itself the product.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://arc.net">Arc</a>/<a href="https://www.diabrowser.com/">Dia</a>, <a href="https://www.warp.dev">Warp</a>, <a href="https://cursor.com">Cursor</a>, <a href="https://zed.dev">Zed</a>.</p>
+        </article>
+      </div>
+
+      <h3 class="group">Spatial and terminal</h3>
+      <div class="tradition-grid">
+        <article class="tradition">
+          <h4>09 &middot; Spatial canvas</h4>
+          <p>Infinite zoom, multiplayer cursors, snapping, arrows that route themselves.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://www.figma.com">Figma</a>, <a href="https://www.tldraw.com">tldraw</a>, <a href="https://miro.com">Miro</a>, <a href="https://excalidraw.com/">Excalidraw</a>.</p>
+        </article>
+        <article class="tradition">
+          <h4>10 &middot; Terminal / TUI revival</h4>
+          <p>Invisible chrome, maximal signal, SSH-safe. AI coding agents live here now, so the terminal is the interface rather than the fallback.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://ghostty.org">Ghostty</a>, <a href="https://www.warp.dev">Warp</a>, <a href="https://github.com/jesseduffield/lazygit">lazygit</a>, <a href="https://k9scli.io">k9s</a>, <a href="https://helix-editor.com/">Helix</a>.</p>
+        </article>
+      </div>
+
+      <h3 class="group">Density and material</h3>
+      <div class="tradition-grid">
+        <article class="tradition">
+          <h4>11 &middot; Bloomberg density</h4>
+          <p>Four-letter mnemonics, amber on black, command-line-first, four-pane tiling, aggressively abbreviated labels. The underrated aesthetic for professionals.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://www.bloomberg.com/professional/solution/bloomberg-terminal/">Bloomberg Terminal</a>, <a href="https://www.tradingview.com/">TradingView</a> Pro, <a href="https://www.causal.app/">Causal</a>. Matt Ström-Awn's <a href="https://matthewstrom.com/writing/ui-density/">UI Density</a> is the canonical modern defence.</p>
+        </article>
+        <article class="tradition">
+          <h4>12 &middot; Liquid Glass</h4>
+          <p>Apple's 2025 cross-device material language — refraction, translucency, depth, reflected motion. The Aqua and Vista glass eras, absorbed and formalised system-wide.</p>
+          <p class="exemplars"><em>Exemplars:</em> iOS 26 system surfaces, <a href="https://www.apple.com/apple-music/">Apple Music</a>, <a href="https://overcast.fm/">Overcast</a>, <a href="https://www.meetcarrot.com/weather/">CARROT Weather</a>.</p>
+        </article>
+        <article class="tradition">
+          <h4>13 &middot; Bento-in-apps</h4>
+          <p>Unequal modular tiles — the WWDC slide layout — absorbed into product UI.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://www.apple.com/apple-fitness-plus/">iOS Fitness</a>, <a href="https://www.raycast.com">Raycast</a> preferences, <a href="https://arc.net">Arc</a> Max layouts.</p>
+        </article>
+      </div>
+
+      <h3 class="group">Style movements that persisted</h3>
+      <div class="tradition-grid">
+        <article class="tradition">
+          <h4>14 &middot; Skeuomorphism (in music production)</h4>
+          <p>Died in mainstream 2013; alive and well in plug-ins, effect racks, and soft-synths, where the hardware metaphor still teaches.</p>
+          <p class="exemplars"><em>Exemplars:</em> <a href="https://www.apple.com/logic-pro/">Logic Pro</a> plug-ins, <a href="https://www.ableton.com/">Ableton Live</a>, <a href="https://www.arturia.com/">Arturia</a> instruments.</p>
+        </article>
+        <article class="tradition">
+          <h4>15 &middot; Glassmorphism</h4>
+          <p>Proto-Aqua (2001), Vista Aero (2007), macOS Big Sur (2020), and now Liquid Glass (2025) as a first-class system material. The one named style movement that won.</p>
+          <p class="exemplars"><em>Exemplars:</em> macOS 26 system chrome, visionOS, any iOS 26 app that adopts <code>.glass</code> materials.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="exemplars" class="bay">
+    <div class="page">
+      <h2 hidden>Exemplars worth opening</h2>
+      <div class="section-mark">
+        <span class="section-num">§&nbsp;vii</span>
+        <span class="section-title">Exemplars worth opening</span>
+      </div>
+      <p>A short list of apps worth studying closely, grouped by archetype. Each one rewards an hour of deliberate keyboard-first use — open the palette, press <kbd>?</kbd>, read every shortcut, try the app without the mouse. The gaps between archetypes are where most of the craft lives.</p>
+
+      <h3>Editors worth opening</h3>
+      <ul class="refs">
+        <li><a href="https://linear.app">Linear</a> — press <kbd>?</kbd> to learn; the shortcut menu is the app's worldview. <kbd>G</kbd> <kbd>I</kbd> inbox, <kbd>G</kbd> <kbd>B</kbd> backlog, <kbd>C</kbd> create, <kbd>⌘</kbd>&thinsp;K everything. Their team essay <a href="https://medium.com/linear-app/invisible-details-2ca718b41a44"><em>Invisible Details</em></a> is the ethos in writing.</li>
+        <li><a href="https://www.figma.com">Figma</a> — multiplayer cursors and presence are the canonical reference. The cursor vocabulary (marquee, resize, rotate, pan) is the quiet craft below the surface.</li>
+        <li><a href="https://code.visualstudio.com">VS Code</a> — <kbd>⇧</kbd><kbd>⌘</kbd>&thinsp;P is the most quietly important keyboard pattern in modern desktop software; every other editor inherited it from here.</li>
+        <li><a href="https://obsidian.md">Obsidian</a> — local-first as a design stance, not just a data stance. Your vault is a folder of Markdown files and the UI reflects that.</li>
+        <li><a href="https://cursor.com">Cursor</a> — the Agents Window (late 2025) reframes the editor around parallel agent runs. The editor tab is no longer primary — the agent is.</li>
+      </ul>
+
+      <h3>Tools worth opening</h3>
+      <ul class="refs">
+        <li><a href="https://www.raycast.com">Raycast</a> — the root window is a single fuzzy-search input, and every extension conforms to that shell. <kbd>⌘</kbd>&thinsp;K opens Actions on any result, everywhere.</li>
+        <li><a href="https://superhuman.com/">Superhuman</a> — the canonical keyboard-first email. Read their essay <a href="https://blog.superhuman.com/how-to-build-a-remarkable-command-palette/"><em>How to build a remarkable command palette</em></a> alongside using it.</li>
+        <li><a href="https://calendar.notion.so">Notion Calendar</a> — (née Cron) <kbd>⌘</kbd>&thinsp;K command menu, <kbd>S</kbd> share availability, <kbd>P</kbd> overlay toggle, <kbd>?</kbd> shortcut sheet. Few calendar apps treat keyboard as primary.</li>
+      </ul>
+
+      <h3>Dashboards worth opening</h3>
+      <ul class="refs">
+        <li><a href="https://dashboard.stripe.com">Stripe Dashboard</a> — tables as the hero interface, filter chips above, drawer on row-click. The state-colour system (<code>pending</code>, <code>processing</code>, <code>requires_action</code>) is studied alongside the product.</li>
+        <li><a href="https://vercel.com/dashboard">Vercel Dashboard</a> — projects-as-filters, one-click drill from summary metric to detail without a page reload.</li>
+        <li><a href="https://posthog.com">PostHog</a> — the signature move is jumping from a funnel drop-off straight into a session replay of the user who hit it.</li>
+      </ul>
+
+      <h3>Canvases worth opening</h3>
+      <ul class="refs">
+        <li><a href="https://www.tldraw.com">tldraw</a> — the open-source SDK is the craft move; the product is the advert. Snapping and arrow routing feel inevitable.</li>
+        <li><a href="https://excalidraw.com/">Excalidraw</a> — the hand-drawn aesthetic as a deliberate craft move; makes rough thinking feel appropriate rather than incomplete.</li>
+      </ul>
+
+      <h3>Conversational worth opening</h3>
+      <ul class="refs">
+        <li><a href="https://claude.ai">Claude</a> — Artifacts (code and document panels) plus Projects (per-space prompts) — the conversation is not the only surface; outputs get their own pane so they don't scroll out of history.</li>
+      </ul>
+
+      <h3>Consoles worth opening</h3>
+      <ul class="refs">
+        <li><a href="https://ghostty.org">Ghostty</a> — Mitchell Hashimoto's thesis is that the terminal should be invisible. Config is a plain text file, not a settings UI.</li>
+        <li><a href="https://k9scli.io">k9s</a> — a full TUI for Kubernetes, keyboard-driven, runs over SSH without a browser.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="galleries" class="bay">
+    <div class="page">
+      <h2 hidden>Where to find app examples</h2>
+      <div class="section-mark">
+        <span class="section-num">§&nbsp;viii</span>
+        <span class="section-title">Where to find app examples</span>
+      </div>
+      <p>The ecosystem for apps is smaller and less indexed than for marketing pages. What exists is valuable precisely because it captures flows, not frames.</p>
+
+      <h3>Mobile app patterns</h3>
+      <ul class="refs">
+        <li><a href="https://mobbin.com">Mobbin</a> — full-flow screen captures across thousands of apps, searchable by flow, industry, and element.</li>
+        <li><a href="https://pageflows.com">Page Flows</a> — full user-flow recordings (sign-up, checkout, onboarding) across hundreds of products.</li>
+        <li><a href="https://screens.ueno.co/">Screens by Ueno</a> — curated screen collections, more taste than breadth.</li>
+      </ul>
+
+      <h3>Desktop and web app patterns</h3>
+      <ul class="refs">
+        <li><a href="https://www.uisources.com">UI Sources</a> — SaaS and productivity app UI patterns, updated regularly.</li>
+        <li><a href="https://reallygoodux.io/">Really Good UX</a> — annotated teardowns of specific flows with design reasoning attached.</li>
+        <li><a href="https://component.gallery/">Component Gallery</a> — every common app component (accordion, autocomplete, carousel, tree, data grid) shown across dozens of design systems.</li>
+      </ul>
+
+      <h3>Platform design systems</h3>
+      <ul class="refs">
+        <li><a href="https://m3.material.io">M3 Material</a>, <a href="https://developer.apple.com/design/human-interface-guidelines/">Apple HIG</a>, <a href="https://carbondesignsystem.com">IBM Carbon</a>, <a href="https://spectrum.adobe.com">Adobe Spectrum</a>, <a href="https://atlassian.design">Atlassian</a> — the reference systems. Each rewards a full read.</li>
+      </ul>
+
+      <h3>Useful not-galleries</h3>
+      <ul class="refs">
+        <li><a href="https://screenlane.com/">Screen Lane</a> — daily shots of new app releases and updates.</li>
+        <li><a href="https://are.na">Are.na</a> "App UI" channels — curators whose taste you trust are usually better filters than algorithmic galleries.</li>
+        <li>Soren Iverson's <a href="https://www.canyouimagine.lol/"><em>Can You Imagine?</em></a> — daily satirical UI concepts; the diagnostic for dark-pattern drift. Several of the jokes have shipped for real.</li>
+      </ul>
+
+      <p class="aside">Dribbble is mostly theatre for apps. The motion reel is not the product; the static render is not the flow. When evaluating any gallery, prefer those that show the <em>fourth screen</em> of a flow — the one after the onboarding, after the first action, where the actual work happens. That is where craft lives or fails.</p>
+    </div>
+  </section>
+
+  <section id="practitioners" class="bay">
+    <div class="page">
+      <h2 hidden>Practitioners to follow</h2>
+      <div class="section-mark">
+        <span class="section-num">§&nbsp;ix</span>
+        <span class="section-title">Practitioners to follow</span>
+      </div>
+      <p>A short list, weighted toward writers whose output will level an app designer's eye faster than more app-browsing will.</p>
+      <ul class="refs">
+        <li><a href="https://rauno.me">Rauno Freiberg</a> &mdash; staff design engineer at Vercel. <a href="https://devouringdetails.com"><em>Devouring Details</em></a> is a paid reference manual of interaction-design chapters with downloadable components. Read <a href="https://every.to/p/invisible-details-of-interaction-design"><em>Invisible Details of Interaction Design</em></a> first.</li>
+        <li><a href="https://emilkowal.ski">Emil Kowalski</a> &mdash; motion at Linear, ex-Vercel. Author of Sonner (the toast library) and Vaul. Read <a href="https://emilkowal.ski/ui/great-animations"><em>Great Animations</em></a> &mdash; the clearest short treatment of motion in circulation. Runs <a href="https://animations.dev/"><em>Animations on the Web</em></a>.</li>
+        <li><a href="https://brianlovin.com">Brian Lovin</a> &mdash; designer at Notion. Public design changelog at <a href="https://changelog.brianlovin.com">changelog.brianlovin.com</a>; his walkthrough of Notion's prototype playground is the clearest look at how a design team integrates agents into shipping craft.</li>
+        <li><a href="https://work.ryo.lu/">Ryo Lu</a> &mdash; head of design at Cursor, ex-Notion. Writing scattered on X (<code>@ryolu_</code>) and <a href="https://work.ryo.lu/">work.ryo.lu</a>; listen to his <a href="https://www.dive.club/deep-dives/ryo-lu-cursor">Dive Club episode</a> on designing Cursor.</li>
+        <li><a href="https://www.soreniverson.com">Soren Iverson</a> &mdash; satirical UI designer; <a href="https://www.canyouimagine.lol/"><em>Can You Imagine?</em></a> archive. The sharpest available diagnostic for dark-pattern drift.</li>
+        <li><a href="https://jasonyuan.design">Jason Yuan</a> &mdash; founder of New Computer (ex-Apple; creator of Mercury OS). An essayist on designing with soul. <a href="https://www.dive.club/deep-dives/jason-yuan">Dive Club: Going beyond craft to design with soul</a>.</li>
+        <li><a href="https://blog.fsck.com">Jesse Vincent</a> &mdash; HumanLayer; multi-agent coding UX. Read <a href="https://blog.fsck.com/2025/10/09/superpowers/"><em>Superpowers</em></a> &mdash; a concrete view of how the agent-editor-human loop should feel.</li>
+        <li><a href="https://x.com/joshm">Josh Miller</a> &mdash; cofounder of The Browser Company. His <a href="https://browsercompany.substack.com/p/letter-to-arc-members-2025"><em>Letter to Arc Members 2025</em></a> is the most-discussed app-philosophy essay of the year.</li>
+        <li><a href="https://maggieappleton.com">Maggie Appleton</a> &mdash; designer and anthropologist on AI interfaces. Read <a href="https://maggieappleton.com/home-cooked-software">Home-Cooked Software and Barefoot Developers</a> and her writing on the "Business Borg aesthetic".</li>
+        <li><a href="https://linear.app/now">Karri Saarinen</a> &mdash; CEO of Linear, ex-Airbnb DLS. <a href="https://linear.app/now/why-is-quality-so-rare"><em>Why is quality so rare?</em></a> is the best short essay on craft-as-commitment in 2025.</li>
+        <li><a href="https://andyallen.me/">Andy Allen</a> &mdash; Not Boring Software, ex-Apple. Case study in apps-as-games: haptics, 3D, sound; deliberate anti-minimalism. <a href="https://www.dive.club/deep-dives/andy-allen">Dive Club: What's wrong with software design today</a>.</li>
+        <li><a href="https://nateparrott.com">Nate Parrott</a> &mdash; founding designer at Arc, now at Anthropic. <a href="https://www.dive.club/deep-dives/nate-parrott">Dive Club: Engineer to founding designer of Arc</a>.</li>
+      </ul>
+      <p>Five books worth owning for app work specifically: <em>Refactoring UI</em> (Wathan &amp; Schoger) is still the best single practical primer; <em>Designing with the Mind in Mind</em> (Jeff Johnson) on perceptual and cognitive limits; <em>About Face</em> (Alan Cooper) &mdash; forty years old in its lineage, but the interaction-design vocabulary it set is still the one in use; <em>Microcopy: The Complete Guide</em> (Kinneret Yifrah) on the voice layer; and <em>The Design of Everyday Things</em> (Don Norman), which is not about software but is the only book that treats affordance with the seriousness it deserves.</p>
+    </div>
+  </section>
+
+  <section id="close" class="bay final">
+    <div class="page">
+      <h2 hidden>One-paragraph synthesis</h2>
+      <div class="section-mark">
+        <span class="section-num">§&nbsp;x</span>
+        <span class="section-title">One-paragraph synthesis</span>
+      </div>
+      <p class="synthesis">The sites you admire and the apps you return to do the same thing from opposite directions. The admired site chooses one structural tradition, commits to one or two quiet dimensions, and pushes expressively on one loud dimension &mdash; restraint composed into impression. The app you return to chooses one archetype, designs the six states before the happy path, treats the keyboard as a first-class input, respects the user's accumulating competence, and makes every reversible decision reversible &mdash; restraint composed into dignity. The move from web-design craft to app-design craft is a move from <em>impression per visit</em> to <em>dignity per return visit</em>: the same hundred-decisions framing, but the decisions are now about state, latency, keyboard, and memory, not hero gradients. The vibe-coded app has no stance on the user's job; it is a shadcn dashboard regardless of what the product is. The considered app is the one whose empty state teaches the next action, whose undo is a primitive rather than a confirmation, whose shortcuts are visible in the menus that contain them, and whose motion is absent from the actions you perform fifty times a day. You do not have to be clever. You have to decide, and to decide in a way that holds up on the hundredth open. That is the whole craft.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="colophon">
+  <div class="page">
+    <div class="rule-wide"></div>
+    <p class="colophon-body">Set in <strong>Source Serif 4</strong> by Frank Grießhammer, with <strong>JetBrains Mono</strong> for the chrome. Paper <code>#FBF8F1</code>, ink <code>#1C1712</code>, a single accent at <code>#A62B1F</code> reserved for links. Measure at 65&nbsp;ch. Grain at three per cent opacity. Sibling to <a href="https://web-design-guide-lilac.vercel.app"><em>The web looks the way someone chose</em></a>. No modals for everything; no spinners where skeletons should be.</p>
+    <p class="footer-meta">April 2026 &nbsp;·&nbsp; Ways of Thinking &nbsp;·&nbsp; Compiled for Douglas McGowan, UC Berkeley</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  const btn = document.getElementById('themeToggle');
+  if (!btn) return;
+  btn.addEventListener('click', function(){
+    const next = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  });
+})();
+</script>
+
+</body>
+</html>
